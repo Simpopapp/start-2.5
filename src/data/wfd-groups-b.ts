@@ -21,7 +21,7 @@ export const wfdGroupsB: string[][] = [
     "Computers used to be larger than they are now.",
     "Social psychology is concerned with the understanding of human behaviors.",
     "You must call your doctor to make an appointment.",
-    "We are encouraged to write on each page."
+    "We are encouraged to write on each page.",
   ],
   [
     "Tact is the knack of making a point without making an enemy.",
@@ -43,7 +43,7 @@ export const wfdGroupsB: string[][] = [
     "To get to the restroom go into the hall and turn right.",
     "Extension requests for the assignment must be submitted before the deadline.",
     "Show your passport and boarding pass at the gate.",
-    "The students are supposed to assemble in the seminar hall before the announcement."
+    "The students are supposed to assemble in the seminar hall before the announcement.",
   ],
   [
     "The marine environment has been destroyed by pollution and unsustainable development.",
@@ -65,7 +65,7 @@ export const wfdGroupsB: string[][] = [
     "Optional tutorials are offered in the final week of the term.",
     "Traffic is the main cause of pollution in main cities.",
     "He has landed the job in a prestigious law firm.",
-    "I dont think its possible to solve the problem easily."
+    "I dont think its possible to solve the problem easily.",
   ],
   [
     "The business plan seminar includes an internship with a local firm.",
@@ -87,7 +87,7 @@ export const wfdGroupsB: string[][] = [
     "Studies showed there is a positive correlation between the two variables.",
     "The director of the gallery was grateful for the anonymous donation.",
     "The other book isnt thorough but its more insightful.",
-    "The results of the study underscored the discoveries from early detections."
+    "The results of the study underscored the discoveries from early detections.",
   ],
   [
     "The earths atmosphere is primarily composed of oxygen and nitrogen gases.",
@@ -109,7 +109,7 @@ export const wfdGroupsB: string[][] = [
     "A good architectural structure should be usable durable and beautiful.",
     "Calculators are not allowed during the examination.",
     "A pie chart provides a useful means of data comparison.",
-    "Before preparing food please make sure to wash your hands."
+    "Before preparing food please make sure to wash your hands.",
   ],
   [
     "Air pollution is a serious problem all over the world.",
@@ -131,7 +131,7 @@ export const wfdGroupsB: string[][] = [
     "The rising sea temperature is a sign of climate change.",
     "An effective business manager is always open to new ideas.",
     "All of the assignments should be submitted in person to the faculty office.",
-    "All the educational reforms have been inadequately implemented."
+    "All the educational reforms have been inadequately implemented.",
   ],
   [
     "An archaeologists new discovery stands out in previously overlooked foundations.",
@@ -153,7 +153,7 @@ export const wfdGroupsB: string[][] = [
     "Plants are the living things that can grow inland or in water.",
     "Radio is a popular form of entertainment throughout the world.",
     "Scientific beneficiary to space exploration is frequently questioned.",
-    "Some people regarded it as care while others regarded it as recklessness."
+    "Some people regarded it as care while others regarded it as recklessness.",
   ],
   [
     "Students have the option to live in college residences or apartments.",
@@ -175,7 +175,7 @@ export const wfdGroupsB: string[][] = [
     "We can work together to achieve higher educational standards.",
     "We cant consider any increase in our price at this stage.",
     "Distance learning allows you to develop a career around your commitments.",
-    "One of the election promises is to decrease the income tax."
+    "One of the election promises is to decrease the income tax.",
   ],
   [
     "Dealing with the growing population is a challenge for many governments.",
@@ -197,7 +197,7 @@ export const wfdGroupsB: string[][] = [
     "Scientists recognized the different ice types according to the water molecule content.",
     "Social media is criticized for causing internet addiction.",
     "Essays and assignments are spread out across the academic year.",
-    "The area has a number of underwater habitats in species."
+    "The area has a number of underwater habitats in species.",
   ],
   [
     "The momentum is defined as the combination of mass and velocity.",
@@ -219,7 +219,7 @@ export const wfdGroupsB: string[][] = [
     "Take the first step to apply for your university scholarship.",
     "Check the website if you are looking for discount textbooks.",
     "The unemployment rate has fallen to its lowest level in years.",
-    "People provide the reports to support your idea in these arguments."
+    "People provide the reports to support your idea in these arguments.",
   ],
   [
     "The shipwreck of this year ruined some artifacts which were interested in historians.",
@@ -241,7 +241,7 @@ export const wfdGroupsB: string[][] = [
     "Exotic activities can help students develop more talents.",
     "Experts say learning and listening to music can reduce the stress.",
     "Extracurricular activities can help students to develop more talents.",
-    "Foods containing overabundant calories supply little or no nutritional value."
+    "Foods containing overabundant calories supply little or no nutritional value.",
   ],
   [
     "Globalization has been an overwhelming urbanization phenomenon.",
@@ -263,7 +263,7 @@ export const wfdGroupsB: string[][] = [
     "Rising inflation may indicate the increasing demand for consumer products.",
     "Scientific experiments should be repeated in order to verify the results.",
     "Scientists found most of the studies today.",
-    "She began by giving an outline of the previous lecture."
+    "She began by giving an outline of the previous lecture.",
   ],
   [
     "Strangely, people are impacted by spontaneously using statistics.",
@@ -285,7 +285,7 @@ export const wfdGroupsB: string[][] = [
     "The extent of advertising on children is very much open to debate.",
     "The faculty staff are very approachable, helpful and extremely friendly.",
     "The falling birth rate means the number of students drops.",
-    "The garden behind the university is open to the public in summer."
+    "The garden behind the university is open to the public in summer.",
   ],
   [
     "The goal of the company is to get investment.",
@@ -307,7 +307,7 @@ export const wfdGroupsB: string[][] = [
     "The timetable for the new term will be available next week.",
     "The topic of next week colloquium will be nuclear disarmament.",
     "The toughest part of research for undergraduate education is funding.",
-    "The two sides have disagreed on how to solve the problem."
+    "The two sides have disagreed on how to solve the problem.",
   ],
   [
     "The university library holds a number of collections of geological maps.",
@@ -329,9 +329,7 @@ export const wfdGroupsB: string[][] = [
     "We support the research on problems related to tropical cyclone dynamics and forecasting.",
     "When sentencing, the court will depend on whether the criminal is guilty or not.",
     "Writing an essay is easy once the research is finished.",
-    "You need to collect a clear note while learning new languages."
+    "You need to collect a clear note while learning new languages.",
   ],
-  [
-    "Your ideas are sophisticated in seminars and tutorials."
-  ]
+  ["Your ideas are sophisticated in seminars and tutorials."],
 ];
