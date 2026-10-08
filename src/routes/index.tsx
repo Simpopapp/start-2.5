@@ -1,16 +1,13 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { Check, Copy, FileJson, FileText, ListMusic } from "lucide-react";
+import { AudioLines, Check, Copy, FileJson, FileText, ListMusic, Music2 } from "lucide-react";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import {
-  groupVersionIds,
-  groupVersions,
-  type GroupVersionId,
-} from "@/data/wfd-group-versions";
+import { groupVersionIds, groupVersions, type GroupVersionId } from "@/data/wfd-group-versions";
+import { wfdSongsC } from "@/data/wfd-songs-c";
 
 type HomeSearch = { tipo: GroupVersionId; grupo: number };
 
@@ -26,17 +23,17 @@ export const Route = createFileRoute("/")({
   },
   head: () => ({
     meta: [
-      { title: "WFD Groups — 3 versões de grupos de frases PTE" },
+      { title: "WFD Groups — 3 versões de grupos de frases PTE + Suno V5" },
       {
         name: "description",
         content:
-          "Visualize e copie grupo por grupo as 301 frases Write From Dictation do PTE Academic em 3 versões de separação: Tipo A (10 em 10), Tipo B (20 em 20) e Tipo C (30 em 30), em texto ou JSON.",
+          "Visualize e copie grupo por grupo as 301 frases Write From Dictation do PTE Academic em 3 versões de separação (A 10 em 10, B 20 em 20, C 30 em 30), em texto ou JSON. No tipo C, copie também a estrutura musical Suno V5 de cada grupo: letra completa e elementos de estilo.",
       },
-      { property: "og:title", content: "WFD Groups — 3 versões de grupos de frases PTE" },
+      { property: "og:title", content: "WFD Groups — 3 versões de grupos de frases PTE + Suno V5" },
       {
         property: "og:description",
         content:
-          "Visualize e copie grupo por grupo as 301 frases Write From Dictation do PTE Academic em 3 versões de separação: Tipo A (10 em 10), Tipo B (20 em 20) e Tipo C (30 em 30), em texto ou JSON.",
+          "Visualize e copie grupo por grupo as 301 frases Write From Dictation do PTE Academic em 3 versões de separação (A 10 em 10, B 20 em 20, C 30 em 30), em texto ou JSON. No tipo C, copie também a estrutura musical Suno V5 de cada grupo: letra completa e elementos de estilo.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -45,7 +42,7 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-type CopyTarget = "text" | "json" | "all";
+type CopyTarget = "text" | "json" | "all" | "letra" | "ritmos";
 
 function copyToClipboard(text: string): Promise<void> {
   if (typeof navigator !== "undefined" && navigator.clipboard) {
@@ -62,6 +59,7 @@ function HomePage() {
   const version = groupVersions[tipo];
   const groupIndex = grupo - 1;
   const sentences = version.groups[groupIndex] ?? [];
+  const song = tipo === "C" ? wfdSongsC.find((s) => s.group === grupo) : undefined;
 
   const navigateTo = (nextTipo: GroupVersionId, nextGrupo: number) => {
     const maxGroup = groupVersions[nextTipo].groupCount;
@@ -100,6 +98,22 @@ function HomePage() {
     );
   };
 
+  const copyLetra = () => {
+    if (!song) return;
+    copyToClipboard(song.letra).then(
+      () => flash("letra"),
+      () => {},
+    );
+  };
+
+  const copyRitmos = () => {
+    if (!song) return;
+    copyToClipboard(song.estilo).then(
+      () => flash("ritmos"),
+      () => {},
+    );
+  };
+
   return (
     <div className="min-h-dvh bg-background text-foreground flex flex-col">
       <header className="border-b border-border/40 bg-card/40 backdrop-blur-sm sticky top-0 z-50">
@@ -108,7 +122,9 @@ function HomePage() {
             <div className="flex size-7 items-center justify-center rounded-lg bg-primary/10 border border-primary/20 text-primary shrink-0">
               <ListMusic className="size-4" />
             </div>
-            <span className="font-semibold text-sm tracking-tight hidden sm:inline">WFD Groups</span>
+            <span className="font-semibold text-sm tracking-tight hidden sm:inline">
+              WFD Groups
+            </span>
             <Badge
               variant="outline"
               className="border-primary/30 text-primary bg-primary/5 text-xs font-normal hidden md:inline-flex"
@@ -185,10 +201,12 @@ function HomePage() {
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="min-w-0">
                   <CardTitle className="text-lg font-semibold">
-                    Grupo {grupo} <span className="text-muted-foreground font-normal">· Tipo {tipo}</span>
+                    Grupo {grupo}{" "}
+                    <span className="text-muted-foreground font-normal">· Tipo {tipo}</span>
                   </CardTitle>
                   <CardDescription className="text-xs sm:text-sm">
-                    {sentences.length} frases · {version.chunkDescription} · ordem do dataset original
+                    {sentences.length} frases · {version.chunkDescription} · ordem do dataset
+                    original
                   </CardDescription>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
@@ -201,13 +219,29 @@ function HomePage() {
                     {copied === "text" ? "Copiado!" : "Copiar texto"}
                   </Button>
                   <Button size="sm" variant="outline" onClick={copyJson}>
-                    {copied === "json" ? (
-                      <Check className="size-4" />
-                    ) : (
-                      <Copy className="size-4" />
-                    )}
+                    {copied === "json" ? <Check className="size-4" /> : <Copy className="size-4" />}
                     {copied === "json" ? "Copiado!" : "Copiar JSON"}
                   </Button>
+                  {tipo === "C" && song && (
+                    <>
+                      <Button size="sm" variant="outline" onClick={copyLetra}>
+                        {copied === "letra" ? (
+                          <Check className="size-4" />
+                        ) : (
+                          <Music2 className="size-4" />
+                        )}
+                        {copied === "letra" ? "Copiado!" : "Copiar letra"}
+                      </Button>
+                      <Button size="sm" variant="outline" onClick={copyRitmos}>
+                        {copied === "ritmos" ? (
+                          <Check className="size-4" />
+                        ) : (
+                          <AudioLines className="size-4" />
+                        )}
+                        {copied === "ritmos" ? "Copiado!" : "Copiar ritmos"}
+                      </Button>
+                    </>
+                  )}
                   <Button size="sm" variant="ghost" onClick={copyAllJson}>
                     {copied === "all" ? (
                       <Check className="size-4" />
@@ -241,7 +275,9 @@ function HomePage() {
 
       <footer className="border-t border-border/30 py-4 text-center text-xs text-muted-foreground">
         <p>
-          Tipo A: 10 em 10 (31 grupos) · Tipo B: 20 em 20 (16 grupos) · Tipo C: 30 em 30 (11 grupos) — 301 frases. Texto copiado: frases separadas por vírgula + parágrafo. JSON: array de strings.
+          Tipo A: 10 em 10 (31 grupos) · Tipo B: 20 em 20 (16 grupos) · Tipo C: 30 em 30 (11 grupos)
+          — 301 frases. Texto copiado: frases separadas por vírgula + parágrafo. JSON: array de
+          strings. Tipo C: estruturas musicais Suno V5 com botões de copiar letra e ritmos.
         </p>
       </footer>
     </div>

@@ -31,7 +31,7 @@ export const wfdGroupsC: string[][] = [
     "There is a lot of debate about that topic.",
     "The farmers need to adapt to the changes in the climate.",
     "How important is packaging in the market for buyers?",
-    "Please keep the key with you because the front door often locks automatically."
+    "Please keep the key with you because the front door often locks automatically.",
   ],
   [
     "Photography can be really useful in geographical research.",
@@ -63,7 +63,7 @@ export const wfdGroupsC: string[][] = [
     "Optional tutorials are offered in the final week of the term.",
     "Traffic is the main cause of pollution in main cities.",
     "He has landed the job in a prestigious law firm.",
-    "I dont think its possible to solve the problem easily."
+    "I dont think its possible to solve the problem easily.",
   ],
   [
     "The business plan seminar includes an internship with a local firm.",
@@ -95,7 +95,7 @@ export const wfdGroupsC: string[][] = [
     "The digital camera has some advantages over traditional film.",
     "Graduates from this course generally find jobs in the insurance industry.",
     "Much of this research is carried out in the laboratory.",
-    "At university students can make friends for life."
+    "At university students can make friends for life.",
   ],
   [
     "The study center in the library has all the latest technology.",
@@ -127,7 +127,7 @@ export const wfdGroupsC: string[][] = [
     "The rising sea temperature is a sign of climate change.",
     "An effective business manager is always open to new ideas.",
     "All of the assignments should be submitted in person to the faculty office.",
-    "All the educational reforms have been inadequately implemented."
+    "All the educational reforms have been inadequately implemented.",
   ],
   [
     "An archaeologists new discovery stands out in previously overlooked foundations.",
@@ -159,7 +159,7 @@ export const wfdGroupsC: string[][] = [
     "The massive accumulation of data was converted to a communicable argument.",
     "The most popular courses still have a few places left.",
     "The museum is closed on Thursday morning every month.",
-    "New media has transcended traditional national boundaries."
+    "New media has transcended traditional national boundaries.",
   ],
   [
     "The new paper challenged many previously accepted theories.",
@@ -191,7 +191,7 @@ export const wfdGroupsC: string[][] = [
     "Scientists recognized the different ice types according to the water molecule content.",
     "Social media is criticized for causing internet addiction.",
     "Essays and assignments are spread out across the academic year.",
-    "The area has a number of underwater habitats in species."
+    "The area has a number of underwater habitats in species.",
   ],
   [
     "The momentum is defined as the combination of mass and velocity.",
@@ -223,7 +223,7 @@ export const wfdGroupsC: string[][] = [
     "A good academic paper should be clear.",
     "All industries consist of systems of inputs, processes, outputs and feedback.",
     "Although sustainable development is not easy, it is an unavoidable responsibility.",
-    "Are these real PTE exam questions?"
+    "Are these real PTE exam questions?",
   ],
   [
     "Artists, other than politicians, played their own roles as critics of the culture.",
@@ -255,7 +255,7 @@ export const wfdGroupsC: string[][] = [
     "Rising inflation may indicate the increasing demand for consumer products.",
     "Scientific experiments should be repeated in order to verify the results.",
     "Scientists found most of the studies today.",
-    "She began by giving an outline of the previous lecture."
+    "She began by giving an outline of the previous lecture.",
   ],
   [
     "Strangely, people are impacted by spontaneously using statistics.",
@@ -287,7 +287,7 @@ export const wfdGroupsC: string[][] = [
     "The opening hours of the library are reduced during summer.",
     "The output should be proportional to the input.",
     "The plight of wildlife has been ignored by many developers.",
-    "The posters are on display at the larger lecture theatre."
+    "The posters are on display at the larger lecture theatre.",
   ],
   [
     "The reception staff can give information of renting and printing.",
@@ -319,9 +319,7 @@ export const wfdGroupsC: string[][] = [
     "We support the research on problems related to tropical cyclone dynamics and forecasting.",
     "When sentencing, the court will depend on whether the criminal is guilty or not.",
     "Writing an essay is easy once the research is finished.",
-    "You need to collect a clear note while learning new languages."
+    "You need to collect a clear note while learning new languages.",
   ],
-  [
-    "Your ideas are sophisticated in seminars and tutorials."
-  ]
+  ["Your ideas are sophisticated in seminars and tutorials."],
 ];

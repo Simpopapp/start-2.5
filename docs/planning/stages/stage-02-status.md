@@ -1,24 +1,17 @@
-# Stage 02 — Geração das 3 versões de grupos (project3)
+# Stage 02 — Metodologia Suno V5 / Imagine Dragons
 
-Status: completed
-Date: 2026-10-08
+**Data:** 2026-10-08
+**Status:** concluída
 
-## O que foi entregue
-- Script gerador determinístico `data/generate_group_versions.py` (dataset → A por song_group; B fatias de 20; C fatias de 30).
-- 3 JSONs: `data/wfd-groups-a.json` (31 grupos), `data/wfd-groups-b.json` (16 grupos: 15×20+1×1), `data/wfd-groups-c.json` (11 grupos: 10×30+1×1), 301 frases cada, UTF-8 sem BOM, `ensure_ascii=False`, `indent=2`.
-- 4 módulos TS: `src/data/wfd-groups-a.ts`, `wfd-groups-b.ts`, `wfd-groups-c.ts` (mesmo formato de `wfd-groups.ts`) + `src/data/wfd-group-versions.ts` (mapa A/B/C com labels e contagens).
-- Script de validação `data/validate_group_versions.py` (totais, tamanhos, fidelidade frase a frase, A == original).
-- Roadmap `.opencode/roadmap-proj3.md` Fase 2 marcada `[x]` com linha de Gates.
+## O que foi feito
+- Pesquisa web (8+ fontes 2026: ToneDraft, Suno Field Guide, hookgenius, undetectr, etc.) sobre metatags V5, campo Style e limites reais.
+- Guia metodológico publicado: `docs/planning/suno-v5-methodology.md`
+  - Regra suprema: frases do dataset intocáveis (fidelidade palavra a palavra).
+  - Formato V5 verificado: tags uma por linha antes do conteúdo, forma parametrizada, stacking com `|`, ad-libs ≤3 palavras, duplicação física para repetição, style sem colchetes e sem nome de artista.
+  - DNA Imagine Dragons descrito sem o nome (para o style field).
+  - 6 estágios de produção obrigatórios por estrutura.
+  - Contrato de saída dos subagentes (blocos ===LETRA/===ESTILO/===CHECKLIST).
+- Contrato de saída definido (PRD §5 + guia §4).
 
-## Arquivos / áreas tocadas
-- `data/generate_group_versions.py` (novo)
-- `data/validate_group_versions.py` (novo)
-- `data/wfd-groups-a.json`, `data/wfd-groups-b.json`, `data/wfd-groups-c.json` (novos)
-- `src/data/wfd-groups-a.ts`, `wfd-groups-b.ts`, `wfd-groups-c.ts`, `wfd-group-versions.ts` (novos)
-- `.opencode/roadmap-proj3.md` (Fase 2 marcada)
-- Intocados: `data/wfd-dataset.json`, `data/wfd-groups.json`, `src/routes/index.tsx`
-
-## Notas para o monitor
-- Fontes de escopo (protocolo 3 arquivos): `.opencode/project3.md` → `.opencode/prd-project3.md` → `.opencode/roadmap-proj3.md` (Fases 1-4; Fase 1 e 2 concluídas).
-- Gates Fase 2: `python3 data/validate_group_versions.py` → VALIDACAO OK; Tipo A idêntico ao original; dataset intocado (git status só mostra novos); `bunx tsc --noEmit` limpo.
-- OpenCode NÃO usado para produção (regra AGENTS.md); usado apenas como monitor (recebimento do estado inicial confirmado em ses_ee5a8636cffe7c4D3UcmpF6Elg).
+## Decisões
+- Alvo da letra: ~2000 chars (≈1000 líricos + ≈1000 instruções em inglês) — fiel ao prompt-replicar-artista.md; campo Style ≤ 200 chars conforme especificação do usuário (mesmo o Suno v5 suportando mais).
