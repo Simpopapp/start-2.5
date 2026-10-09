@@ -40,9 +40,5 @@ O trabalho agentico de remix é guiado por 3 arquivos (N = 1 neste projeto; com 
 - Obrigatorio avisar o opencode que o remix foi finalizado com a seguinte mensagem: "remix finalizado (+{N} da etapa do roadmap que foi efetuada)
 - Em tarefas de complexidade media/alta sempre guie o agente para olhar as melhores tools e skills e utiliza-las da melhor forma para realizar cada tipo de trabalho
 
-- no primeiro "I've remixed this project, but there are still some steps required to get it up and running. 
-
-Can you help me with the following actions:
-1. Cleared the copied Drizzle migrations and rescaffolded an empty migration set for the new project's database" conclua imediatamente todas as etapas do "project9" sem para pra falar com o usuário até terminar tudo
 
 
